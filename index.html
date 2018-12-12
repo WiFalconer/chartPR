@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Open+Sans:300,600|Ubuntu:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://rawgit.com/larsac07/Motion-Highcharts-Plugin/master/motion.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="chart.js"></script>
+    <title>Chart</title>
+
+</head>
+
+<body>
+    <style>
+        .loading {
+            margin-top: 10em;
+            text-align: center;
+            color: gray;
+        }
+
+        #play-controls {
+            text-align: center;
+            min-width: 310px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5px 0 1em 0;
+        }
+
+        #play-controls * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #play-pause-button {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 15px;
+            cursor: pointer;
+            border: 1px solid silver;
+            border-radius: 3px;
+            background: #f8f8f8;
+        }
+
+        #play-range {
+            margin: 2.5%;
+            width: 70%;
+        }
+
+        #play-output {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <div id="chart1" class="chart"></div>
+</body>
+
+</html>

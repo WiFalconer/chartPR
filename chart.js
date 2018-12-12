@@ -39,7 +39,7 @@ var categories = ['0-4', '5-9', '10-14', '15-19',
 
 
 $(document).ready(function () {
-    Highcharts.chart('chart1', {
+    Highcharts.chart('popTotal', {
         chart: {
             backgroundColor: '#000',
             type: 'bar',

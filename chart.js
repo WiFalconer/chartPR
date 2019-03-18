@@ -167,92 +167,92 @@ var categories1539 = ['15-19',
     '20-24', '25-29', '30-34', '35-39'
 ];
 $(document).ready(function () {
-Highcharts.chart('chart05', {
-    chart: {
-        type: 'bar',
-    },
-    title: {
-        text: 'Población total de Puerto Rico 1899 - 2016 edades 15-39',
-
-    },
-    subtitle: {
-        text: 'Fuente: census.gov',
-
-    },
-    xAxis: [{
-        categories: categories1539,
-        reversed: false,
-        labels: {
-            style: {
-                color: '#606F7B',
-                step: 1
-            }
-        }
-    }, { // Mirror axis in the right side
-        opposite: true,
-        reversed: false,
-        categories: categories1539,
-        linkedTo: 0,
-        labels: {
-            style: {
-                color: '#606F7B',
-                step: 1
-            }
-        }
-    }],
-    yAxis: {
-        title: {
-            text: null
+    Highcharts.chart('chart05', {
+        chart: {
+            type: 'bar',
         },
-        labels: {
-            style: {
-                color: '#606F7B'
-            },
-            formatter: function () {
-                return Math.abs(this.value / 10000) + '%';
+        title: {
+            text: 'Población total de Puerto Rico 1899 - 2016 edades 15-39',
+
+        },
+        subtitle: {
+            text: 'Fuente: census.gov',
+
+        },
+        xAxis: [{
+            categories: categories1539,
+            reversed: false,
+            labels: {
+                style: {
+                    color: '#606F7B',
+                    step: 1
+                }
             }
-        }
-    },
+        }, { // Mirror axis in the right side
+            opposite: true,
+            reversed: false,
+            categories: categories1539,
+            linkedTo: 0,
+            labels: {
+                style: {
+                    color: '#606F7B',
+                    step: 1
+                }
+            }
+        }],
+        yAxis: {
+            title: {
+                text: null
+            },
+            labels: {
+                style: {
+                    color: '#606F7B'
+                },
+                formatter: function () {
+                    return Math.abs(this.value / 10000) + '%';
+                }
+            }
+        },
 
-    plotOptions: {
-        // Spacing between data bars
-        series: {
-            stacking: 'normal',
+        plotOptions: {
+            // Spacing between data bars
+            series: {
+                stacking: 'normal',
 
-        }
-    },
+            }
+        },
 
-    tooltip: {
-        backgroundColor: '#FFF',
-        // This controls the hovering box when mouse is over data
-        formatter: () => `<b>${this.series.name}, Age ${this.point.category}</b><br/>Population: ${Highcharts.numberFormat(Math.abs(this.point.y), 0)}`
-    },
+        tooltip: {
+            backgroundColor: '#FFF',
+            // This controls the hovering box when mouse is over data
+            formatter: () => `<b>${this.series.name}, Age ${this.point.category}</b><br/>Population: ${Highcharts.numberFormat(Math.abs(this.point.y), 0)}`
+        },
 
-    motion: {
-        // Enables the motion aspect of the graph
-        enabled: true,
-        labels: [1899, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
-        series: [0, 1],
-        updateInterval: 30,
-        loop: true,
-    },
+        motion: {
+            // Enables the motion aspect of the graph
+            enabled: true,
+            labels: [1899, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+            series: [0, 1],
+            updateInterval: 30,
+            loop: true,
+        },
 
-    series: [{
-        name: 'Total',
-        color: '#FFD13F',
-        borderColor: '#FFD13F',
-        data: [{
-            sequence: [93148, 113789, 126248, 186150, 206149, 220231, 291326, 291326, 337134, 326717, 313436, 284259, 274958, 267879, 260120, 249966, 242568, 234298]
-        }, {
-            sequence: [88475, 108508, 128531, 149336, 206326, 192930, 234876, 233876, 272430, 287227, 301191, 260850, 264094, 263539, 262420, 257500, 248792, 240621]
-        }, {
-            sequence: [84265, 94213, 96053, 99780, 148008, 157992, 182638, 182638, 236136, 270562, 271507, 244159, 233990, 227123, 224022, 222722, 224671, 225720]
-        }, {
-            sequence: [64317, 70422, 78005, 94709, 102596, 131737, 156652, 156652, 229762, 254287, 262825, 248173, 243564, 237053, 229793, 220629, 208957, 198834]
-        }, ]
+        series: [{
+            name: 'Total',
+            color: '#FFD13F',
+            borderColor: '#FFD13F',
+            data: [{
+                sequence: [93148, 113789, 126248, 186150, 206149, 220231, 291326, 291326, 337134, 326717, 313436, 284259, 274958, 267879, 260120, 249966, 242568, 234298]
+            }, {
+                sequence: [88475, 108508, 128531, 149336, 206326, 192930, 234876, 233876, 272430, 287227, 301191, 260850, 264094, 263539, 262420, 257500, 248792, 240621]
+            }, {
+                sequence: [84265, 94213, 96053, 99780, 148008, 157992, 182638, 182638, 236136, 270562, 271507, 244159, 233990, 227123, 224022, 222722, 224671, 225720]
+            }, {
+                sequence: [64317, 70422, 78005, 94709, 102596, 131737, 156652, 156652, 229762, 254287, 262825, 248173, 243564, 237053, 229793, 220629, 208957, 198834]
+            }, ]
 
-    }],
-});
+        }],
+    });
 });
 
 $(document).ready(function () {
@@ -489,6 +489,180 @@ $(document).ready(function () {
 
             ],
 
+        }]
+    })
+});
+
+$(document).ready(function () {
+    Highcharts.chart('chart06', {
+        chart: {
+            zoomType: 'x',
+        },
+        title: {
+            text: 'Grafica 1: Delitos Tipo 1 por cada 100,000 Habitantes (1960-1992)',
+
+        },
+        subtitle: {
+            text: ' ',
+        },
+        xAxis: [{
+            categories: [1960, 1961, 1962, 1963, 1964, 1965,
+                1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973,
+                1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981,
+                1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989,
+                1990, 1991, 1992
+            ],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                style: {
+                    color: '#606F7B'
+                }
+            },
+            title: {
+                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                style: {
+                    color: '#B8C2CC'
+                }
+            }
+        }],
+        tooltip: {
+            borderColor: '#FFD13F',
+            valueDecimals: 1,
+            backgroundColor: '#FFF',
+            shared: true
+        },
+        plotOptions: {
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        credits: {
+            enabled: false
+        },
+
+        series: [{
+            type: 'line',
+            color: 'red',
+            name: 'Regression Line',
+            data: [
+                [0, 1500],
+                [32, 3500]
+            ],
+            marker: {
+                enabled: false
+            },
+            states: {
+                hover: {
+                    lineWidth: 0
+                }
+            },
+            enableMouseTracking: false
+        }, {
+            name: 'Delitos Tipo 1',
+            type: 'line',
+            color: '#008445',
+            data: [
+                1416.104572, 1598.844245, 1964.293466, 2195.586773, 2256.785848, 2233.240433,
+                2314.070046, 2316.533838, 2480.463552, 2304.146602, 2450.928879, 2582.148868,
+                2545.423132, 2574.967556, 2879.930288, 3030.591794, 2910.256033, 2708.909496,
+                2590.113544, 2573.861158, 2883.76109, 3011.43529, 2976.652763, 2806.569634,
+                3086.889969, 3471.642035, 3531.054711, 3222.13231, 3251.40087, 3169.039743,
+                3525.661832, 3372.166579, 3605.097052
+            ],
+        }]
+    })
+});
+
+
+
+$(document).ready(function () {
+    Highcharts.chart('chart07', {
+        chart: {
+            zoomType: 'x',
+        },
+        title: {
+            text: 'Grafica 2: Delitos Tipo 1 por cada 100,000 Habitantes (1992-2018)',
+
+        },
+        subtitle: {
+            text: ' ',
+        },
+        xAxis: [{
+            categories: [1992, 1993, 1994, 1995, 1996, 1997,
+                1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+                2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+                2014, 2015, 2016, 2017, 2018
+            ],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                style: {
+                    color: '#606F7B'
+                }
+            },
+            title: {
+                text: 'Delitos Tipo 1 por cada 100,000 Habitantes',
+                style: {
+                    color: '#B8C2CC'
+                }
+            }
+        }],
+        tooltip: {
+            borderColor: '#FFD13F',
+            valueDecimals: 1,
+            backgroundColor: '#FFF',
+            shared: true
+        },
+        plotOptions: {
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        credits: {
+            enabled: false
+        },
+
+        series: [{
+            type: 'line',
+            color: 'red',
+            name: 'Regression Line',
+            data: [
+                [0, 3000],
+                [26, 1000]
+            ],
+            marker: {
+                enabled: false
+            },
+            states: {
+                hover: {
+                    lineWidth: 0
+                }
+            },
+            enableMouseTracking: false
+        }, {
+            name: 'Delitos Tipo 1',
+            type: 'line',
+            color: '#008445',
+            data: [
+                3605.097052,
+                3361.848004, 3205.444207, 2902.390407,
+                2708.142965, 2553.36373, 2321.678695, 2149.865699, 1993.023532, 1836.191406,
+                2374.401136, 2137.636415, 1840.090016, 1702.141802, 1632.654563, 1662.148641,
+                1827.71734, 1775.981777, 1670.464967, 1692.347589, 1698.176386, 1618.973588,
+                1527.346835, 1340.142802, 1255.416084, 1166.824535, 970.3254364
+
+            ],
         }]
     })
 });

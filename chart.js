@@ -102,11 +102,6 @@ $(document).ready(function () {
             }
         },
 
-        tooltip: {
-            backgroundColor: '#FFF',
-            // This controls the hovering box when mouse is over data
-            formatter: () => `<b>${this.series.name}, Age ${this.point.category}</b><br/>Population: ${Highcharts.numberFormat(Math.abs(this.point.y), 0)}`
-        },
 
         motion: {
             // Enables the motion aspect of the graph
@@ -662,6 +657,72 @@ $(document).ready(function () {
                 1827.71734, 1775.981777, 1670.464967, 1692.347589, 1698.176386, 1618.973588,
                 1527.346835, 1340.142802, 1255.416084, 1166.824535, 970.3254364
 
+            ],
+        }]
+    })
+});
+
+$(document).ready(function () {
+    Highcharts.chart('chart08', {
+        chart: {
+            zoomType: 'x',
+        },
+        title: {
+            text: 'Poblacion Total edades 15-39',
+
+        },
+        subtitle: {
+            text: '',
+        },
+        xAxis: [{
+            categories: [1960, 1961, 1962, 1963, 1964, 1965,
+                1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973,
+                1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981,
+                1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989,
+                1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997,
+                1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+                2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+                2014, 2015
+            ],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                style: {
+                    color: '#606F7B'
+                }
+            },
+            title: {
+                text: 'Población total',
+            }
+        }],
+        tooltip: {
+            borderColor: '#FFD13F',
+            valueDecimals: 1,
+            backgroundColor: '#FFF',
+            shared: true
+        },
+        plotOptions: {
+            series: {
+                lineWidth: 5,
+                animation: {
+                    duration: 7500
+                }
+            },
+
+        },
+        series: [{
+            name: 'Población Total',
+            type: 'area',
+            color: '#008445',
+            data: [
+                813581, 843460, 871295, 895214, 914527, 930061, 711901, 716434, 828847, 989064,
+                1008540, 1044303, 1082002, 1120311, 1158525, 1196346, 1035747, 1226048, 1240028,
+                1253413, 1264886, 1280581, 1293751, 1048647, 1318647, 1331660, 1125121, 1354226,
+                1361414, 1366931, 1128641, 1148601, 1388667, 871711, 1404179, 1107172, 1413075,
+                1415560, 1416744, 1142686, 1410775, 1408843, 1168104, 1397577, 1391685, 1114513,
+                1380887, 1375178, 1370344, 1100124, 1362697, 1357571, 1353197, 1349179, 1344675,
+                1339004
             ],
         }]
     })
